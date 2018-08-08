@@ -1,0 +1,65 @@
+{
+  // // https://qiita.com/keita1987/items/f01cf9f307fedfca00c6
+
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C++ Launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "targetArchitecture": "x64",
+      // "program": "enter program name, for example ${workspaceRoot}/a.out",
+      "program": "${workspaceRoot}/a.out",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceRoot}",
+      "environment": [],
+      "externalConsole": true,
+      "linux": {
+        "MIMode": "gdb"
+      },
+      "osx": {
+        "MIMode": "lldb"
+        // "MIMode": "gdb" // デバッガにGDBを使用したい場合。homebrewで brew install gdb で入る
+      },
+      "windows": {
+        "MIMode": "gdb"
+      }
+    },
+    {
+      "name": "C++ Attach",
+      "type": "cppdbg",
+      "request": "launch",
+      "targetArchitecture": "x64",
+      // "program": "enter program name, for example ${workspaceRoot}/a.out",
+      "program": "${workspaceRoot}/a.out",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceRoot}",
+      "environment": [],
+      "processId": "${command.pickProcess}",
+      "externalConsole": false,
+      "linux": {
+        "MIMode": "gdb",
+        "setupCommands": [
+          {
+            "text": "-enable-pretty-printing",
+            "description": "enable pretty printing",
+            "ignoreFailures": true
+          },
+          {
+            "text": "handle SIGPIPE nostop noprint pass",
+            "description": "ignore SIGPIPE",
+            "ignoreFailures": true
+          }
+        ]
+      },
+      "osx": {
+        "MIMode": "lldb"
+      },
+      "windows": {
+        "MIMode": "gdb"
+      }
+    }
+  ]
+}
