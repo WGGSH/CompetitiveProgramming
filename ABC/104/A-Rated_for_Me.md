@@ -22,7 +22,7 @@
 高橋くんのレーティングが変動する次のコンテストの名称（'**ABC**', '**ARC**', '**AGC**' のいずれか）を出力せよ.
 
 ## 回答
-```:cpp
+```cpp
 #include <iostream>
 #include <string>
 using namespace std;

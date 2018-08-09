@@ -22,7 +22,7 @@
 ***S*** が問題文中の条件全てを満たすなら'AC', そうでなければ'WC' と出力せよ
 
 ## 回答
-```
+```cpp
 #include <iostream>
 #include <string>
 using namespace std;
