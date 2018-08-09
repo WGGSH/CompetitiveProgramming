@@ -50,3 +50,6 @@ int main(void){
   cout << ans << endl;
 }
 ```
+
+## 解説
+非負整数*m*に対して,*a*で割った余り (*m mod a*) の最大値は (*a-1*)となるので, *a<sub>1</sub>* + *a<sub>2</sub>* + ... + *a<sub>N</sub>* - *N* が *f*(m) の最大値となる.
