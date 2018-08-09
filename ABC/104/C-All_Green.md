@@ -33,7 +33,7 @@ pD cD
 総合スコアを ***G*** 点以上にするために得必要のある最小の問題数を出力せよ.なお,この目標は必ず達成可能である（制約を参照のこと）.
 
 ## 回答
-```:cpp
+```cpp
 #include <iostream>
 #include <vector>
 using namespace std;
