@@ -41,11 +41,14 @@ stream.on("close", () => {
     return data.split('').map((char) => char === 'o').reduce((acc, cur) => acc << 1 | (cur ? 1 : 0), 0);
   })
 
+  console.log(dataList);
+
   // データの加工
   const max = 1 << N;
   let min = N;
 
   const answer = (1 << M) - 1;
+  console.log(answer);
   for(let bitCase = 0; bitCase < max; bitCase++) {
     // bitCase が立っているものだけでデータを取り出す
 
@@ -55,6 +58,7 @@ stream.on("close", () => {
     const filteredDataList = bitPositions.map((bitPosition) => dataList[bitPosition]);
 
     const result = filteredDataList.reduce((acc, cur) => acc | cur, 0);
+    console.log(bitPositions, filteredDataList, result);
     if (result === answer) {
       if (bitCount < min) {
         min = bitCount;
